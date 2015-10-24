@@ -1,0 +1,41 @@
+<!--
+	Created by: Vu Dinh Lieu
+    Initial date: 10/23/2015
+    Description: html layout
+    Using: html5/css3, bootstrap, javascript...
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%- title %></title>
+    <meta charset ="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/bootstrap.css" />
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+	  <link rel="stylesheet" href="/styles/bootstrap-theme.min.css" />
+	  <link rel="stylesheet" href="/styles/bootstrap-theme.css" />
+  </head>
+  <body>
+    <header style="position:relative">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">firstSailsJs</a>
+        </div>
+      </div>
+    </header>
+    <style>
+      #content{
+        position:relative; 
+        margin-top: 100px;
+        display: block;
+        height: 1000px;
+      }
+    </style>
+    <div class="container" id="content">
+      <%- body %>
+    </div>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/validator.js"></script>
+    <script type="text/javascript" src="/js/validation.js"></script>
+  </body>
+</html>

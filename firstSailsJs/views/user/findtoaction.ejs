@@ -1,0 +1,24 @@
+<style>
+	input{
+		margin-top: 10px;
+	}
+
+	#form-signup{
+		display: block;
+		width: 40%;
+		margin: auto;
+		padding: 20px;
+	}
+</style>
+
+<form action="/user/update/<%= user.id %>" method="POST" class="form-update">
+	<h2>Hey, you're updating a user...</h2>
+	<div id="form-update">
+		<input type="text" class="form-control" value="<%= user.name %>" name="name" />
+		<input type="text" class="form-control" value="<%= user.title %>" name="title" />
+		<input type="text" class="form-control" value="<%= user.email %>" name="email" />
+		<br />
+		<input type="submit" class="btn btn-lg btn-primary btn-block" value="Update" />
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	</div>
+</form>

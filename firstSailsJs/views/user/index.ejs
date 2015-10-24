@@ -1,0 +1,29 @@
+<div>
+	<h3>Users</h3>
+	<br />
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Title</th>
+			<th>Email</th>
+		</tr>
+		<% _.each(users, function(user) { %>
+			<tr data-id="<%= user.id %>" data-model="user">
+				<td><%= user.id %></td>
+				<td><%= user.name %></td>
+				<td><%= user.title %></td>
+				<td><%= user.email %></td>
+				<td><a href="/user/one/<%= user.id %>" class="btn btn-sm btn-primary">View Details</a></td>
+				<td><a href="/user/findtoaction/<%= user.id %>" class="btn btn-sm btn-warning">Update</a></td>
+				<td>
+					<form action="/user/destroy/<%= user.id %>" method="POST">
+						<input type="hidden" name="_method" value="delete" />
+						<input type="submit" class="btn btn-sm btn-danger" value="Delete" />
+						<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+					</form>
+				</td>
+			</tr>
+		<% }) %>
+	</table>
+</div>

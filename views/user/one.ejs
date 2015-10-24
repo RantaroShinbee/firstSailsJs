@@ -1,0 +1,27 @@
+<style>
+	#row{
+		display:block;
+		width: 60%;
+		margin: auto;
+	}
+
+	span{
+		display: block;
+		float: left;
+		padding-left: 20px;
+		margin-top: 7px;
+		font-weight: bold;
+		color: #333;
+	}
+	
+	a{
+		margin-left: 20px;
+	}
+</style>
+<div class="" id="row">
+	<span> <%= user.name %> </span>
+	<span> <%= user.title %> </span>
+	<span><%= user.email %> </span>
+	<a class="btn btn-medium btn-warning" href="/user/findtoaction/<%= user.id %>">Update</a>
+	<a class="btn btn-medium btn-success" href="/user/index/">view List</a>
+</div>
